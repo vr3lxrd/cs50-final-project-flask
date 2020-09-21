@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block style %}
+<link href="../static/review.css" rel="stylesheet">
+<style>
+    body{
+        background-image: url("{{serie['image_url']}}");
+    }
+</style>
+
+{% endblock %}
+{% block title %} Review serie {% endblock %}
+
+{% block main %}
+
+<form class="col-lg-3 addForm needs-validation" action=/review?id={{serie['serie_id']}} method="POST">
+    <h1>Faça seu review sobre {{ serie['name'] }}</h1>
+    <h2>Gênero {{ serie['genero'] }}</h2>
+    <h2>A nota atual é de {{nota}} estrelas</h2>
+    <div class="form-group form-control-lg comentario">
+      <label for="exampleFormControlTextarea1">Comentário (Opcional) </label>
+      <textarea class="form-control" name="descricao" rows="3"></textarea>
+    </div>
+    <div class="form-group form-control-lg formReview">
+        <span>Nota</span>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="nota" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">1</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="nota" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">2</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="nota" id="inlineRadio3" value="option3">
+            <label class="form-check-label" for="inlineRadio3">3</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="nota" id="inlineRadio4" value="option4">
+            <label class="form-check-label" for="inlineRadio4">4</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="nota" id="inlineRadio5" value="option5">
+            <label class="form-check-label" for="inlineRadio5">5</label>
+        </div>
+    </div>
+    <div class="form-group form-control-lg">
+        <button type="submit" class="btn btn-dark btn-block">Submit</button>
+    </div>
+
+</form>
+
+    <div class="avaliacoes col-lg-8">
+        {% for review in reviews %}
+        <div class="card cardReview col-lg-3" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Nota: {{review['nota']}}</h5>
+              <p class="card-text">{{review['comentario']}}</p>
+            </div>
+          </div>
+        {% endfor %}
+
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,13 @@
+.corpo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 90vh;
+    padding: 10px;
+}
+.serieCard{
+    max-height: 380px;
+    margin-right: 10px;
+    padding: 0 !important;
+}

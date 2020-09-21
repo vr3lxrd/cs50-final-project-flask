@@ -1,0 +1,32 @@
+.corpo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.form-group{
+    margin-top: 30px;
+}
+
+.addForm{
+    border: 1px solid rgb(180, 180, 180);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.addForm h1{
+    padding-left: 12px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.addForm button{
+    font-size: 16px;
+    padding: 5px;
+    margin-top: -10px;
+}
+
+.checkDiv{
+    margin-top: 70px;
+}

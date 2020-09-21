@@ -1,0 +1,54 @@
+.corpo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px !important;
+    height: 90vh;
+    flex-wrap: wrap;
+}
+
+.form-group{
+    margin-top: 30px;
+}
+
+.addForm{
+    border: 1px solid rgb(180, 180, 180);
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+}
+.addForm h1{
+    padding-left: 12px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.addForm button{
+    font-size: 16px;
+    padding: 5px;
+    margin-top: -10px;
+}
+
+.checkDiv{
+    margin-top: 70px;
+}
+
+.formReview{
+    margin-top: 80px;
+}
+.avaliacoes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    background-color:#343a40;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 15px;
+}
+.cardReview{
+    margin: 10px;
+    max-height: 100px;
+}

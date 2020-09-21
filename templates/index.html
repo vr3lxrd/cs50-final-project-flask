@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block style %}<link href="../static/index.css" rel="stylesheet">{% endblock %}
+{% block title %} Reviews {% endblock %}
+
+{% block main %}
+
+{% for serie in seriesDb %}
+
+<div class="card col-lg-2 serieCard">
+    <img class="card-img-top" src={{serie["image_url"]}} alt="Card image cap" style="max-height: 200px; min-height: 200px;">
+    <div class="card-body">
+      <h5 class="card-title">{{serie["name"]}}</h5>
+      <p class="card-text">{{serie["descricao"]}}</p>
+      <p class="card-text">Nota Atual = {{serie["avg_note"]}}</p>
+      <a method="GET" href=/review?serie={{serie["name_url"]}} class="btn btn-dark btn-block">Reviews</a>
+    </div>
+  </div>
+
+{% endfor %}
+
+
+{% endblock %}
